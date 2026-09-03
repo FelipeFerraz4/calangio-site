@@ -1,0 +1,151 @@
+<!-- Hero Section -->
+<section class="hero-section">
+  <div class="container hero-container">
+    <div class="hero-content animated-fade-in">
+      <span class="section-badge">
+        <span class="status-dot"></span>
+        {{ translationService.currentContent().home.hero.badge }}
+      </span>
+
+      <h1 class="hero-title">
+        {{ translationService.currentContent().home.hero.titleStart }}
+        <span class="glow-text-gradient">{{ translationService.currentContent().home.hero.titleHighlight }}</span>
+        {{ translationService.currentContent().home.hero.titleEnd }}
+      </h1>
+
+      <p class="hero-subtitle">
+        {{ translationService.currentContent().home.hero.subtitle }}
+      </p>
+
+      <div class="hero-actions">
+        <a [routerLink]="['/', translationService.currentLang(), 'contato']" class="btn btn-primary">
+          {{ translationService.currentContent().home.hero.ctaPrimary }}
+          <i class="bi bi-arrow-right"></i>
+        </a>
+
+        <a [routerLink]="['/', translationService.currentLang(), 'portfolio']" class="btn btn-secondary">
+          {{ translationService.currentContent().home.hero.ctaSecondary }}
+        </a>
+      </div>
+
+      <!-- Stats Grid -->
+      <div class="stats-grid">
+        <div class="stat-card" *ngFor="let stat of translationService.currentContent().home.hero.stats">
+          <span class="stat-value">{{ stat.value }}</span>
+          <span class="stat-label">{{ stat.label }}</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero Visual Card -->
+    <div class="hero-visual">
+      <div class="hero-card-glow">
+        <img src="assets/images/large-light-logo.svg" alt="Calang.io Illustration" class="hero-illustration" />
+        <div class="hero-badge-overlay">
+          <img src="assets/images/ufca.png" alt="UFCA" class="ufca-logo-img" />
+          <span>{{ translationService.currentContent().home.hero.badgeOverlay }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About Preview Section -->
+<section class="about-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">{{ translationService.currentContent().home.about.badge }}</span>
+      <h2 class="section-title">{{ translationService.currentContent().home.about.title }}</h2>
+      <p class="section-subtitle">{{ translationService.currentContent().home.about.subtitle }}</p>
+    </div>
+
+    <div class="pillars-grid">
+      <div class="glass-card pillar-card" *ngFor="let pillar of translationService.currentContent().home.about.pillars">
+        <div class="pillar-icon-box">
+          <i class="bi bi-code-slash pillar-bi-icon" *ngIf="pillar.icon === 'code'"></i>
+          <i class="bi bi-lightbulb-fill pillar-bi-icon" *ngIf="pillar.icon === 'lightbulb'"></i>
+          <i class="bi bi-handshake-fill pillar-bi-icon" *ngIf="pillar.icon === 'handshake'"></i>
+        </div>
+        <h3 class="pillar-title">{{ pillar.title }}</h3>
+        <p class="pillar-desc">{{ pillar.description }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services Preview Section -->
+<section class="services-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">{{ translationService.currentContent().home.services.badge }}</span>
+      <h2 class="section-title">{{ translationService.currentContent().home.services.title }}</h2>
+      <p class="section-subtitle">{{ translationService.currentContent().home.services.subtitle }}</p>
+    </div>
+
+    <div class="services-grid">
+      <div class="glass-card service-card" *ngFor="let item of translationService.currentContent().home.services.items">
+        <div class="service-icon-wrapper">
+          <i class="bi bi-laptop-fill service-bi-icon" *ngIf="item.icon === 'desktop'"></i>
+          <i class="bi bi-phone-fill service-bi-icon" *ngIf="item.icon === 'smartphone'"></i>
+          <i class="bi bi-cloud-arrow-up-fill service-bi-icon" *ngIf="item.icon === 'cloud'"></i>
+        </div>
+        <h3 class="service-title">{{ item.title }}</h3>
+        <p class="service-desc">{{ item.description }}</p>
+      </div>
+    </div>
+
+    <div class="center-cta">
+      <a [routerLink]="['/', translationService.currentLang(), 'servicos']" class="btn btn-outline-brand">
+        {{ translationService.currentContent().home.services.linkText }}
+        <i class="bi bi-arrow-right"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Portfolio Preview Section -->
+<section class="portfolio-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">{{ translationService.currentContent().home.portfolio.badge }}</span>
+      <h2 class="section-title">{{ translationService.currentContent().home.portfolio.title }}</h2>
+      <p class="section-subtitle">{{ translationService.currentContent().home.portfolio.subtitle }}</p>
+    </div>
+
+    <div class="projects-grid">
+      <div class="glass-card project-card" *ngFor="let project of translationService.currentContent().home.portfolio.projects">
+        <div class="project-header-badge">
+          <span class="status-badge status-active">{{ project.status }}</span>
+          <span class="project-category">{{ project.category }}</span>
+        </div>
+        <h3 class="project-title">{{ project.title }}</h3>
+        <p class="project-desc">{{ project.description }}</p>
+        <div class="project-tags">
+          <span class="tag" *ngFor="let tag of project.tags">{{ tag }}</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="center-cta">
+      <a [routerLink]="['/', translationService.currentLang(), 'portfolio']" class="btn btn-primary">
+        {{ translationService.currentContent().home.portfolio.linkText }}
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Final Section -->
+<section class="cta-banner-section">
+  <div class="container">
+    <div class="cta-banner-card">
+      <h2 class="cta-title">{{ translationService.currentContent().home.cta.title }}</h2>
+      <p class="cta-subtitle">{{ translationService.currentContent().home.cta.description }}</p>
+      <div class="cta-buttons">
+        <a [routerLink]="['/', translationService.currentLang(), 'contato']" class="btn btn-primary btn-lg">
+          {{ translationService.currentContent().home.cta.buttonText }}
+          <i class="bi bi-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

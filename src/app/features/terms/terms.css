@@ -1,0 +1,24 @@
+.legal-content-section {
+  padding-bottom: 5rem;
+}
+
+.legal-card {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3rem;
+}
+
+.legal-block {
+  margin-bottom: 2rem;
+}
+
+.legal-heading {
+  font-size: 1.35rem;
+  margin-bottom: 0.75rem;
+  color: var(--color-brand-green);
+}
+
+.legal-text {
+  font-size: 1rem;
+  line-height: 1.7;
+}

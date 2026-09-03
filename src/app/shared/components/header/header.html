@@ -1,0 +1,106 @@
+<header class="header" [class.scrolled]="isScrolled()">
+  <div class="container header-container">
+    <!-- Brand Logo (Light / Dark Mode Adaptive via ThemeService) -->
+    <a [routerLink]="['/', translationService.currentLang()]" class="logo" (click)="closeMobileMenu()">
+      <img *ngIf="!themeService.isDark()" src="assets/images/logotipo-calangio.svg" alt="Calang.io Logo" class="logo-img" />
+      <img *ngIf="themeService.isDark()" src="assets/images/logotipo-calangio-white.svg" alt="Calang.io Logo" class="logo-img" />
+    </a>
+
+    <!-- Desktop Navigation -->
+    <nav class="desktop-nav">
+      <a [routerLink]="['/', translationService.currentLang()]" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+        {{ translationService.currentContent().nav.home }}
+      </a>
+      <a [routerLink]="['/', translationService.currentLang(), 'servicos']" routerLinkActive="active">
+        {{ translationService.currentContent().nav.services }}
+      </a>
+      <a [routerLink]="['/', translationService.currentLang(), 'portfolio']" routerLinkActive="active">
+        {{ translationService.currentContent().nav.portfolio }}
+      </a>
+      <a [routerLink]="['/', translationService.currentLang(), 'sobre']" routerLinkActive="active">
+        {{ translationService.currentContent().nav.about }}
+      </a>
+      <a [routerLink]="['/', translationService.currentLang(), 'equipe']" routerLinkActive="active">
+        {{ translationService.currentContent().nav.team }}
+      </a>
+      <a [routerLink]="['/', translationService.currentLang(), 'contato']" routerLinkActive="active">
+        {{ translationService.currentContent().nav.contact }}
+      </a>
+    </nav>
+
+    <!-- Controls (Theme, Language, Login Button) -->
+    <div class="header-controls">
+      <!-- Dark/Light Mode Toggle -->
+      <button type="button" class="icon-btn" (click)="toggleTheme()" [attr.aria-label]="themeService.isDark() ? 'Ativar Modo Claro' : 'Ativar Modo Escuro'" [title]="themeService.isDark() ? 'Modo Claro' : 'Modo Escuro'">
+        <i class="bi bi-sun-fill" *ngIf="themeService.isDark()" style="color: #5BC500; font-size: 1.1rem;"></i>
+        <i class="bi bi-moon-stars-fill" *ngIf="!themeService.isDark()" style="color: #081F2C; font-size: 1.1rem;"></i>
+      </button>
+
+      <!-- Language Selector Toggle Pill -->
+      <div class="lang-switch-container">
+        <button type="button" class="lang-pill-btn" [class.active]="translationService.currentLang() === 'pt'" (click)="translationService.setLanguage('pt')">
+          PT
+        </button>
+        <span class="lang-divider">|</span>
+        <button type="button" class="lang-pill-btn" [class.active]="translationService.currentLang() === 'en'" (click)="translationService.setLanguage('en')">
+          EN
+        </button>
+      </div>
+
+      <!-- Keycloak Login Button Placeholder -->
+      <button type="button" class="btn btn-secondary login-btn" (click)="onLoginClick()">
+        <i class="bi bi-box-arrow-in-right" style="font-size: 1rem;"></i>
+        <span>{{ translationService.currentContent().nav.login }}</span>
+      </button>
+
+      <!-- Mobile Hamburger Toggle Button -->
+      <button type="button" class="hamburger-btn" (click)="toggleMobileMenu()" aria-label="Abrir Menu">
+        <span class="hamburger-line" [class.open]="isMobileMenuOpen()"></span>
+        <span class="hamburger-line" [class.open]="isMobileMenuOpen()"></span>
+        <span class="hamburger-line" [class.open]="isMobileMenuOpen()"></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Overlay Navigation -->
+  <div class="mobile-menu" [class.open]="isMobileMenuOpen()">
+    <nav class="mobile-nav">
+      <a [routerLink]="['/', translationService.currentLang()]" (click)="closeMobileMenu()">
+        {{ translationService.currentContent().nav.home }}
+      </a>
+      <a [routerLink]="['/', translationService.currentLang(), 'servicos']" (click)="closeMobileMenu()">
+        {{ translationService.currentContent().nav.services }}
+      </a>
+      <a [routerLink]="['/', translationService.currentLang(), 'portfolio']" (click)="closeMobileMenu()">
+        {{ translationService.currentContent().nav.portfolio }}
+      </a>
+      <a [routerLink]="['/', translationService.currentLang(), 'sobre']" (click)="closeMobileMenu()">
+        {{ translationService.currentContent().nav.about }}
+      </a>
+      <a [routerLink]="['/', translationService.currentLang(), 'equipe']" (click)="closeMobileMenu()">
+        {{ translationService.currentContent().nav.team }}
+      </a>
+      <a [routerLink]="['/', translationService.currentLang(), 'contato']" (click)="closeMobileMenu()">
+        {{ translationService.currentContent().nav.contact }}
+      </a>
+
+      <div class="mobile-actions">
+        <button type="button" class="btn btn-primary w-full" (click)="onLoginClick(); closeMobileMenu()">
+          <i class="bi bi-box-arrow-in-right"></i>
+          {{ translationService.currentContent().nav.login }} (Keycloak)
+        </button>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Toast Notification for Login -->
+  <div class="toast-notification" *ngIf="showLoginToast()">
+    <div class="toast-content">
+      <span class="toast-icon">🔐</span>
+      <div>
+        <strong>{{ translationService.currentContent().nav.toastTitle }}</strong>
+        <p>{{ translationService.currentContent().nav.toastDesc }}</p>
+      </div>
+    </div>
+  </div>
+</header>

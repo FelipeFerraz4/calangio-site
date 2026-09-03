@@ -1,0 +1,14 @@
+node_modules
+.angular
+dist
+.git
+.gitignore
+.editorconfig
+README.md
+Dockerfile
+docker-compose.yml
+docker-compose.dev.yml
+docker-compose.prod.yml
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

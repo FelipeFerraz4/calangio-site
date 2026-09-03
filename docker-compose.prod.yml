@@ -1,0 +1,4 @@
+services:
+  calangio-site:
+    environment:
+      - NODE_ENV=production

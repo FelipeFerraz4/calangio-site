@@ -1,0 +1,78 @@
+<!-- Page Header -->
+<section class="page-header-section">
+  <div class="container text-center">
+    <span class="section-badge">{{ translationService.currentContent().services.hero.badge }}</span>
+    <h1 class="page-title">{{ translationService.currentContent().services.hero.title }}</h1>
+    <p class="page-subtitle">{{ translationService.currentContent().services.hero.subtitle }}</p>
+  </div>
+</section>
+
+<!-- Services Grid Section -->
+<section class="services-list-section">
+  <div class="container">
+    <div class="services-grid-full">
+      <div class="glass-card service-detail-card" *ngFor="let item of translationService.currentContent().services.list">
+        <div class="service-card-header">
+          <div class="icon-box">
+            <i class="bi bi-laptop-fill service-bi-icon" *ngIf="item.icon === 'desktop'"></i>
+            <i class="bi bi-cloud-arrow-up-fill service-bi-icon" *ngIf="item.icon === 'cloud'"></i>
+            <i class="bi bi-phone-fill service-bi-icon" *ngIf="item.icon === 'smartphone'"></i>
+            <i class="bi bi-palette-fill service-bi-icon" *ngIf="item.icon === 'mosaic'"></i>
+            <i class="bi bi-cpu-fill service-bi-icon" *ngIf="item.icon === 'lightbulb'"></i>
+            <i class="bi bi-people-fill service-bi-icon" *ngIf="item.icon === 'handshake'"></i>
+          </div>
+          <div>
+            <h3 class="service-card-title">{{ item.title }}</h3>
+            <span class="service-card-subtitle">{{ item.subtitle }}</span>
+          </div>
+        </div>
+
+        <p class="service-card-desc">{{ item.description }}</p>
+
+        <div class="deliverables-box">
+          <strong class="box-label">{{ translationService.currentContent().services.deliverablesLabel }}</strong>
+          <ul>
+            <li *ngFor="let d of item.deliverables"><i class="bi bi-check-circle-fill text-brand" style="margin-right: 0.35rem;"></i>{{ d }}</li>
+          </ul>
+        </div>
+
+        <div class="tech-stack-box">
+          <span class="tech-pill" *ngFor="let tech of item.technologies">{{ tech }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Process Section -->
+<section class="process-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">{{ translationService.currentContent().services.process.badge }}</span>
+      <h2 class="section-title">{{ translationService.currentContent().services.process.title }}</h2>
+      <p class="section-subtitle">{{ translationService.currentContent().services.process.subtitle }}</p>
+    </div>
+
+    <div class="process-timeline">
+      <div class="process-step-card" *ngFor="let step of translationService.currentContent().services.process.steps">
+        <span class="step-num">{{ step.step }}</span>
+        <h3 class="step-title">{{ step.title }}</h3>
+        <p class="step-desc">{{ step.description }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-banner-section">
+  <div class="container">
+    <div class="cta-banner-card">
+      <h2 class="cta-title">{{ translationService.currentContent().services.cta.title }}</h2>
+      <p class="cta-subtitle">{{ translationService.currentContent().services.cta.description }}</p>
+      <a [routerLink]="['/', translationService.currentLang(), 'contato']" class="btn btn-primary btn-lg">
+        {{ translationService.currentContent().services.cta.buttonText }}
+        <i class="bi bi-arrow-right"></i>
+      </a>
+    </div>
+  </div>
+</section>

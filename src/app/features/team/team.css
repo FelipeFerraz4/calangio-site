@@ -1,0 +1,105 @@
+.departments-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.dept-name {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-brand-green);
+}
+
+.dept-desc {
+  font-size: 0.95rem;
+}
+
+.members-section {
+  background: var(--color-bg-soft);
+}
+
+.members-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.member-card {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.avatar-box {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: var(--color-bg-green-soft);
+  border: 2px solid var(--color-brand-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+}
+
+.avatar-img {
+  width: 48px;
+  height: 48px;
+}
+
+.member-name {
+  font-size: 1.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.member-role {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-brand-green);
+  display: block;
+}
+
+.member-dept {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.member-bio {
+  font-size: 0.9rem;
+}
+
+/* Join Us Card */
+.join-card {
+  text-align: center;
+}
+
+.benefits-list {
+  max-width: 600px;
+  margin: 1.5rem auto 2.5rem auto;
+  text-align: left;
+}
+
+.benefits-list ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.benefits-list li {
+  font-size: 0.95rem;
+  color: #a0b4c4;
+}
+
+@media (max-width: 992px) {
+  .departments-grid {
+    grid-template-columns: 1fr;
+  }
+  .members-grid {
+    grid-template-columns: 1fr;
+  }
+}

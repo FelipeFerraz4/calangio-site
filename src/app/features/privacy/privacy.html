@@ -1,0 +1,17 @@
+<section class="page-header-section">
+  <div class="container text-center">
+    <h1 class="page-title">{{ translationService.currentContent().privacy.hero.title }}</h1>
+    <p class="page-subtitle">{{ translationService.currentContent().privacy.hero.lastUpdated }}</p>
+  </div>
+</section>
+
+<section class="legal-content-section">
+  <div class="container">
+    <div class="glass-card legal-card">
+      <div class="legal-block" *ngFor="let sec of translationService.currentContent().privacy.sections">
+        <h2 class="legal-heading">{{ sec.title }}</h2>
+        <p class="legal-text">{{ sec.content }}</p>
+      </div>
+    </div>
+  </div>
+</section>

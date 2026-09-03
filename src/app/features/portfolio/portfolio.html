@@ -1,0 +1,67 @@
+<!-- Page Header -->
+<section class="page-header-section">
+  <div class="container text-center">
+    <span class="section-badge">{{ translationService.currentContent().portfolio.hero.badge }}</span>
+    <h1 class="page-title">{{ translationService.currentContent().portfolio.hero.title }}</h1>
+    <p class="page-subtitle">{{ translationService.currentContent().portfolio.hero.subtitle }}</p>
+
+    <!-- Filter Category Tabs -->
+    <div class="filter-tabs">
+      <button
+        type="button"
+        class="tab-btn"
+        *ngFor="let cat of translationService.currentContent().portfolio.categories"
+        [class.active]="selectedCategory() === cat.id"
+        (click)="setCategory(cat.id)">
+        {{ cat.label }}
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- Portfolio Grid Section -->
+<section class="portfolio-grid-section">
+  <div class="container">
+    <div class="portfolio-grid">
+      <div class="glass-card project-detail-card" *ngFor="let project of filteredProjects()">
+        <div class="project-header">
+          <div class="project-meta">
+            <span class="status-badge status-active">{{ project.status }}</span>
+            <span class="category-label">{{ project.categoryLabel || project.category }}</span>
+            <span class="year-badge">{{ project.year }}</span>
+          </div>
+          <h3 class="project-title">{{ project.title }}</h3>
+          <span class="client-name">{{ translationService.currentContent().portfolio.clientLabel }} {{ project.client }}</span>
+        </div>
+
+        <p class="project-summary">{{ project.summary || project.description }}</p>
+
+        <div class="highlights-box" *ngIf="project.highlights">
+          <strong class="highlights-label">{{ translationService.currentContent().portfolio.highlightsLabel }}</strong>
+          <ul>
+            <li *ngFor="let h of project.highlights">⭐ {{ h }}</li>
+          </ul>
+        </div>
+
+        <div class="project-footer">
+          <div class="tags-group">
+            <span class="tech-tag" *ngFor="let tech of project.technologies">{{ tech }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-banner-section">
+  <div class="container">
+    <div class="cta-banner-card">
+      <h2 class="cta-title">{{ translationService.currentContent().portfolio.cta.title }}</h2>
+      <p class="cta-subtitle">{{ translationService.currentContent().portfolio.cta.description }}</p>
+      <a [routerLink]="['/', translationService.currentLang(), 'contato']" class="btn btn-primary btn-lg">
+        {{ translationService.currentContent().portfolio.cta.buttonText }}
+      </a>
+    </div>
+  </div>
+</section>

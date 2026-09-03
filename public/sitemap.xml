@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Home -->
+  <url>
+    <loc>https://calangio.com.br/pt</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calangio.com.br/pt" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://calangio.com.br/en" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calangio.com.br/pt" />
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://calangio.com.br/en</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calangio.com.br/pt" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://calangio.com.br/en" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calangio.com.br/pt" />
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Serviços -->
+  <url>
+    <loc>https://calangio.com.br/pt/servicos</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calangio.com.br/pt/servicos" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://calangio.com.br/en/services" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calangio.com.br/pt/servicos" />
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://calangio.com.br/en/services</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calangio.com.br/pt/servicos" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://calangio.com.br/en/services" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calangio.com.br/pt/servicos" />
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Portfólio -->
+  <url>
+    <loc>https://calangio.com.br/pt/portfolio</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calangio.com.br/pt/portfolio" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://calangio.com.br/en/portfolio" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calangio.com.br/pt/portfolio" />
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://calangio.com.br/en/portfolio</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calangio.com.br/pt/portfolio" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://calangio.com.br/en/portfolio" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calangio.com.br/pt/portfolio" />
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Sobre -->
+  <url>
+    <loc>https://calangio.com.br/pt/sobre</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calangio.com.br/pt/sobre" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://calangio.com.br/en/about" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calangio.com.br/pt/sobre" />
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://calangio.com.br/en/about</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calangio.com.br/pt/sobre" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://calangio.com.br/en/about" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calangio.com.br/pt/sobre" />
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Equipe -->
+  <url>
+    <loc>https://calangio.com.br/pt/equipe</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calangio.com.br/pt/equipe" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://calangio.com.br/en/team" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calangio.com.br/pt/equipe" />
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calangio.com.br/en/team</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calangio.com.br/pt/equipe" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://calangio.com.br/en/team" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calangio.com.br/pt/equipe" />
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Contato -->
+  <url>
+    <loc>https://calangio.com.br/pt/contato</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calangio.com.br/pt/contato" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://calangio.com.br/en/contact" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calangio.com.br/pt/contato" />
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calangio.com.br/en/contact</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calangio.com.br/pt/contato" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://calangio.com.br/en/contact" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calangio.com.br/pt/contato" />
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Privacidade -->
+  <url>
+    <loc>https://calangio.com.br/pt/privacidade</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calangio.com.br/pt/privacidade" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://calangio.com.br/en/privacy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calangio.com.br/pt/privacidade" />
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://calangio.com.br/en/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calangio.com.br/pt/privacidade" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://calangio.com.br/en/privacy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calangio.com.br/pt/privacidade" />
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- Termos -->
+  <url>
+    <loc>https://calangio.com.br/pt/termos</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calangio.com.br/pt/termos" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://calangio.com.br/en/terms" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calangio.com.br/pt/termos" />
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://calangio.com.br/en/terms</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calangio.com.br/pt/termos" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://calangio.com.br/en/terms" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calangio.com.br/pt/termos" />
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+</urlset>

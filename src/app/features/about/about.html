@@ -1,0 +1,91 @@
+<!-- Page Header -->
+<section class="page-header-section">
+  <div class="container text-center">
+    <span class="section-badge">{{ translationService.currentContent().about.hero.badge }}</span>
+    <h1 class="page-title">{{ translationService.currentContent().about.hero.title }}</h1>
+    <p class="page-subtitle">{{ translationService.currentContent().about.hero.subtitle }}</p>
+  </div>
+</section>
+
+<!-- Our Story & Team Photo -->
+<section class="story-section">
+  <div class="container story-grid">
+    <div class="story-content">
+      <span class="section-badge">{{ translationService.currentContent().about.story.badge }}</span>
+      <h2 class="section-title">{{ translationService.currentContent().about.story.title }}</h2>
+      <p>{{ translationService.currentContent().about.story.p1 }}</p>
+      <p>{{ translationService.currentContent().about.story.p2 }}</p>
+      <p>{{ translationService.currentContent().about.story.p3 }}</p>
+    </div>
+
+    <div class="story-photo-box">
+      <img src="assets/images/segunda-equipe-calang.png" alt="Equipe Calang.io" class="team-photo" />
+      <span class="photo-caption">{{ translationService.currentContent().about.photoCaption }}</span>
+    </div>
+  </div>
+</section>
+
+<!-- MVV Section -->
+<section class="mvv-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">{{ translationService.currentContent().about.mvv.badge }}</span>
+      <h2 class="section-title">{{ translationService.currentContent().about.mvv.title }}</h2>
+    </div>
+
+    <div class="mvv-cards-grid">
+      <div class="glass-card mvv-card highlight-card">
+        <h3 class="mvv-card-title">🎯 {{ translationService.currentContent().about.mvv.mission.title }}</h3>
+        <p>{{ translationService.currentContent().about.mvv.mission.description }}</p>
+      </div>
+
+      <div class="glass-card mvv-card highlight-card">
+        <h3 class="mvv-card-title">🚀 {{ translationService.currentContent().about.mvv.vision.title }}</h3>
+        <p>{{ translationService.currentContent().about.mvv.vision.description }}</p>
+      </div>
+    </div>
+
+    <div class="values-grid">
+      <div class="glass-card value-card" *ngFor="let val of translationService.currentContent().about.mvv.values">
+        <h4 class="value-title">💎 {{ val.title }}</h4>
+        <p class="value-desc">{{ val.description }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- What is MEJ Section -->
+<section class="mej-section">
+  <div class="container mej-grid">
+    <div class="mej-info">
+      <span class="section-badge">{{ translationService.currentContent().about.mej.badge }}</span>
+      <h2 class="section-title">{{ translationService.currentContent().about.mej.title }}</h2>
+      <p>{{ translationService.currentContent().about.mej.description }}</p>
+    </div>
+
+    <div class="mej-benefits-card glass-card">
+      <h3 class="benefits-title">{{ translationService.currentContent().about.benefitsTitle }}</h3>
+      <ul>
+        <li *ngFor="let b of translationService.currentContent().about.mej.benefits">⚡ {{ b }}</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Timeline Section -->
+<section class="timeline-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">{{ translationService.currentContent().about.timeline.badge }}</span>
+      <h2 class="section-title">{{ translationService.currentContent().about.timeline.title }}</h2>
+    </div>
+
+    <div class="timeline-grid">
+      <div class="timeline-step" *ngFor="let step of translationService.currentContent().about.timeline.steps">
+        <span class="timeline-year">{{ step.year }}</span>
+        <h3 class="timeline-step-title">{{ step.title }}</h3>
+        <p class="timeline-step-desc">{{ step.description }}</p>
+      </div>
+    </div>
+  </div>
+</section>

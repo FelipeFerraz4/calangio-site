@@ -1,0 +1,15 @@
+services:
+  calangio-site:
+    container_name: calangio-site
+    restart: unless-stopped
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    expose:
+      - "4000"
+    networks:
+      - infra-net
+
+networks:
+  infra-net:
+    external: true

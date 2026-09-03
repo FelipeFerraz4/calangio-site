@@ -1,0 +1,66 @@
+<!-- Page Header -->
+<section class="page-header-section">
+  <div class="container text-center">
+    <span class="section-badge">{{ translationService.currentContent().team.hero.badge }}</span>
+    <h1 class="page-title">{{ translationService.currentContent().team.hero.title }}</h1>
+    <p class="page-subtitle">{{ translationService.currentContent().team.hero.subtitle }}</p>
+  </div>
+</section>
+
+<!-- Departments Section -->
+<section class="departments-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">{{ translationService.currentContent().team.structureTitle }}</h2>
+    </div>
+
+    <div class="departments-grid">
+      <div class="glass-card dept-card" *ngFor="let dept of translationService.currentContent().team.departments">
+        <h3 class="dept-name">⚡ {{ dept.name }}</h3>
+        <p class="dept-desc">{{ dept.description }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Members Section -->
+<section class="members-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">{{ translationService.currentContent().team.membersTitle }}</h2>
+    </div>
+
+    <div class="members-grid">
+      <div class="glass-card member-card" *ngFor="let m of translationService.currentContent().team.members">
+        <div class="avatar-box">
+          <img [src]="m.avatar" [alt]="m.name" class="avatar-img" />
+        </div>
+        <h3 class="member-name">{{ m.name }}</h3>
+        <span class="member-role">{{ m.role }}</span>
+        <span class="member-dept">{{ m.department }}</span>
+        <p class="member-bio">{{ m.bio }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Recruitment Join Us Section -->
+<section class="join-section">
+  <div class="container">
+    <div class="cta-banner-card join-card">
+      <span class="section-badge">{{ translationService.currentContent().team.joinUs.badge }}</span>
+      <h2 class="cta-title">{{ translationService.currentContent().team.joinUs.title }}</h2>
+      <p class="cta-subtitle">{{ translationService.currentContent().team.joinUs.description }}</p>
+
+      <div class="benefits-list">
+        <ul>
+          <li *ngFor="let b of translationService.currentContent().team.joinUs.benefits">✅ {{ b }}</li>
+        </ul>
+      </div>
+
+      <a [routerLink]="['/', translationService.currentLang(), 'contato']" class="btn btn-primary btn-lg">
+        {{ translationService.currentContent().team.joinUs.buttonText }}
+      </a>
+    </div>
+  </div>
+</section>
