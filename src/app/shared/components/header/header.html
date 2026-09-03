@@ -92,15 +92,15 @@
       </div>
     </nav>
   </div>
+</header>
 
-  <!-- Toast Notification for Login -->
-  <div class="toast-notification" *ngIf="showLoginToast()">
-    <div class="toast-content">
-      <span class="toast-icon">🔐</span>
-      <div>
-        <strong>{{ translationService.currentContent().nav.toastTitle }}</strong>
-        <p>{{ translationService.currentContent().nav.toastDesc }}</p>
-      </div>
+<!-- Toast Notification for Login (Placed OUTSIDE <header> so backdrop-filter doesn't trap fixed positioning) -->
+<div class="toast-notification" *ngIf="showLoginToast()">
+  <div class="toast-content">
+    <span class="toast-icon">🔐</span>
+    <div>
+      <strong>{{ translationService.currentContent().nav.toastTitle }}</strong>
+      <p>{{ translationService.currentContent().nav.toastDesc }}</p>
     </div>
   </div>
-</header>
+</div>
