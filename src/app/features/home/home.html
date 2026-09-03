@@ -63,8 +63,8 @@
       <div class="glass-card pillar-card" *ngFor="let pillar of translationService.currentContent().home.about.pillars">
         <div class="pillar-icon-box">
           <i class="bi bi-code-slash pillar-bi-icon" *ngIf="pillar.icon === 'code'"></i>
-          <i class="bi bi-lightbulb-fill pillar-bi-icon" *ngIf="pillar.icon === 'lightbulb'"></i>
-          <i class="bi bi-handshake-fill pillar-bi-icon" *ngIf="pillar.icon === 'handshake'"></i>
+          <i class="bi bi-palette-fill pillar-bi-icon" *ngIf="pillar.icon === 'palette' || pillar.icon === 'lightbulb'"></i>
+          <i class="bi bi-people-fill pillar-bi-icon" *ngIf="pillar.icon === 'handshake' || pillar.icon === 'social'"></i>
         </div>
         <h3 class="pillar-title">{{ pillar.title }}</h3>
         <p class="pillar-desc">{{ pillar.description }}</p>
