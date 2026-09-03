@@ -27,9 +27,9 @@ export const homeContent = {
         description: 'Construímos software personalizado utilizando as tecnologias mais modernas do mercado como Angular, React, Node.js e Python.'
       },
       {
-        icon: 'lightbulb',
+        icon: 'palette',
         title: 'Design UX/UI Intuitivo',
-        description: 'Criamos interfaces bonitas, modernas e focadas na experiência do usuário para garantir engajamento e resultados.'
+        description: 'Criamos interfaces artísticas, elegantes e focadas na experiência do usuário para garantir engajamento e estética impecável.'
       },
       {
         icon: 'handshake',

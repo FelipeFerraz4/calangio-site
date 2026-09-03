@@ -27,9 +27,9 @@ export const homeContent = {
         description: 'We build tailored software using Angular, React, Node.js, and Python.'
       },
       {
-        icon: 'lightbulb',
-        title: 'Intuitive UX/UI Design',
-        description: 'Beautiful, modern interfaces designed for great user experience.'
+        icon: 'palette',
+        title: 'Intuitive & Artistic UX/UI Design',
+        description: 'Beautiful, artistic interfaces designed for outstanding user experience and aesthetic elegance.'
       },
       {
         icon: 'handshake',
