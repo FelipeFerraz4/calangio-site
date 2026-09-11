@@ -16,7 +16,16 @@
 
     <div class="departments-grid">
       <div class="glass-card dept-card" *ngFor="let dept of translationService.currentContent().team.departments">
-        <h3 class="dept-name">⚡ {{ dept.name }}</h3>
+        <div class="dept-header">
+          <div class="dept-icon-box">
+            <i class="bi bi-stars" *ngIf="dept.icon === 'stars'"></i>
+            <i class="bi bi-code-slash" *ngIf="dept.icon === 'code'"></i>
+            <i class="bi bi-megaphone-fill" *ngIf="dept.icon === 'megaphone' || dept.icon === 'marketing' || dept.icon === 'sparkles'"></i>
+            <i class="bi bi-heart-fill" *ngIf="dept.icon === 'heart'"></i>
+            <i class="bi bi-stars" *ngIf="!dept.icon"></i>
+          </div>
+          <h3 class="dept-name">{{ dept.name }}</h3>
+        </div>
         <p class="dept-desc">{{ dept.description }}</p>
       </div>
     </div>
@@ -54,12 +63,18 @@
 
       <div class="benefits-list">
         <ul>
-          <li *ngFor="let b of translationService.currentContent().team.joinUs.benefits">✅ {{ b }}</li>
+          <li *ngFor="let b of translationService.currentContent().team.joinUs.benefits" class="benefit-item">
+            <span class="benefit-icon-box">
+              <i class="bi bi-patch-check-fill"></i>
+            </span>
+            <span class="benefit-text">{{ b }}</span>
+          </li>
         </ul>
       </div>
 
       <a [routerLink]="['/', translationService.currentLang(), 'contato']" class="btn btn-primary btn-lg">
         {{ translationService.currentContent().team.joinUs.buttonText }}
+        <i class="bi bi-arrow-right" style="margin-left: 0.4rem;"></i>
       </a>
     </div>
   </div>

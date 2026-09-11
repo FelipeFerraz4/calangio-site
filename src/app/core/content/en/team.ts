@@ -8,18 +8,22 @@ export const teamContent = {
   membersTitle: 'Our Members & Teams',
   departments: [
     {
+      icon: 'stars',
       name: 'Presidency & Strategy',
       description: 'Institutional leadership, external relations, and company governance.'
     },
     {
+      icon: 'code',
       name: 'Projects & Technology Board',
       description: 'Management of development teams, software architecture, and quality assurance.'
     },
     {
+      icon: 'megaphone',
       name: 'Marketing & Commercial Board',
       description: 'Brand communication, client prospecting, and partnership management.'
     },
     {
+      icon: 'heart',
       name: 'People & Financial Management Board',
       description: 'Member development, organizational culture, and financial management.'
     }

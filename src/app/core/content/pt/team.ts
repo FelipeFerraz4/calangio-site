@@ -8,18 +8,22 @@ export const teamContent = {
   membersTitle: 'Nossos Membros e Times',
   departments: [
     {
+      icon: 'stars',
       name: 'Presidência & Estratégia',
       description: 'Liderança institucional, relacionamento externo e governança da empresa júnior.'
     },
     {
+      icon: 'code',
       name: 'Diretoria de Projetos & Tecnologia',
       description: 'Gestão dos times de desenvolvimento, arquitetura de software e garantia de qualidade.'
     },
     {
+      icon: 'megaphone',
       name: 'Diretoria de Marketing & Comercial',
       description: 'Comunicação da marca, prospecção de novos clientes e gestão de parcerias.'
     },
     {
+      icon: 'heart',
       name: 'Diretoria de Gestão de Pessoas & Financeiro',
       description: 'Desenvolvimento de membros, clima organizacional e gestão financeira.'
     }
