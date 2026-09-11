@@ -18,7 +18,6 @@ export class Contact implements OnInit {
   formData = {
     name: '',
     email: '',
-    phone: '',
     serviceType: '',
     budget: '',
     message: ''
@@ -52,7 +51,6 @@ export class Contact implements OnInit {
       this.formData = {
         name: '',
         email: '',
-        phone: '',
         serviceType: '',
         budget: '',
         message: ''

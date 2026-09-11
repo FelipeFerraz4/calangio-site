@@ -10,7 +10,7 @@ export const privacyContent = {
     },
     {
       title: '2. Coleta de Dados Pessoais',
-      content: 'Coletamos dados pessoais fornecidos voluntariamente pelo usuário ao preencher nosso formulário de contato, tais como: nome completo, endereço de e-mail, número de telefone/WhatsApp e informações sobre o projeto desejado. Também podemos coletar dados de navegação anonimizados via cookies técnicos para fins estatísticos.'
+      content: 'Coletamos dados pessoais fornecidos voluntariamente pelo usuário ao preencher nosso formulário de contato, tais como: nome completo, endereço de e-mail e informações sobre o projeto desejado. Também podemos coletar dados de navegação anonimizados via cookies técnicos para fins estatísticos.'
     },
     {
       title: '3. Finalidade do Tratamento de Dados',
@@ -22,7 +22,7 @@ export const privacyContent = {
     },
     {
       title: '5. Direitos do Titular',
-      content: 'Nos termos da LGPD, você tem o direito de solicitar a confirmação da existência de tratamento, o acesso aos dados, a correção de dados incompletos ou a eliminação dos seus dados pessoais armazenados. Para exercer esses direitos, entre em contato via contato@calangio.com.br.'
+      content: 'Nos termos da LGPD, você tem o direito de solicitar a confirmação da existência de tratamento, o acesso aos dados, a correção de dados incompletos ou a eliminação dos seus dados pessoais armazenados. Para exercer esses direitos, entre em contato via calangio.cct@ufca.edu.br.'
     }
   ]
 };

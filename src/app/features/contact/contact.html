@@ -22,18 +22,37 @@
               <i class="bi bi-envelope-fill info-bi-icon"></i>
             </div>
             <div>
-              <strong>E-mail Comercial</strong>
-              <p>{{ translationService.currentContent().contact.info.email }}</p>
+              <strong>{{ translationService.currentContent().contact.info.emailTitle }}</strong>
+              <p>
+                <a [href]="'mailto:' + translationService.currentContent().contact.info.email" class="info-link">
+                  {{ translationService.currentContent().contact.info.email }}
+                </a>
+              </p>
+              <p *ngIf="translationService.currentContent().contact.info.secondaryEmail">
+                <a [href]="'mailto:' + translationService.currentContent().contact.info.secondaryEmail" class="info-secondary-link">
+                  {{ translationService.currentContent().contact.info.secondaryEmail }}
+                </a>
+              </p>
             </div>
           </div>
 
           <div class="info-item">
             <div class="info-icon-box">
-              <i class="bi bi-telephone-fill info-bi-icon"></i>
+              <i class="bi bi-share-fill info-bi-icon"></i>
             </div>
             <div>
-              <strong>Telefone / WhatsApp</strong>
-              <p>{{ translationService.currentContent().contact.info.phone }}</p>
+              <strong>{{ translationService.currentContent().contact.info.socialTitle }}</strong>
+              <div class="contact-social-links">
+                <a [href]="translationService.currentContent().contact.info.socials.linkedin" target="_blank" rel="noopener noreferrer" class="contact-social-link" title="LinkedIn">
+                  <i class="bi bi-linkedin"></i> LinkedIn
+                </a>
+                <a [href]="translationService.currentContent().contact.info.socials.instagram" target="_blank" rel="noopener noreferrer" class="contact-social-link" title="Instagram">
+                  <i class="bi bi-instagram"></i> Instagram
+                </a>
+                <a [href]="translationService.currentContent().contact.info.socials.github" target="_blank" rel="noopener noreferrer" class="contact-social-link" title="GitHub">
+                  <i class="bi bi-github"></i> GitHub
+                </a>
+              </div>
             </div>
           </div>
 
@@ -42,7 +61,7 @@
               <i class="bi bi-geo-alt-fill info-bi-icon"></i>
             </div>
             <div>
-              <strong>Endereço e Sede</strong>
+              <strong>{{ translationService.currentContent().contact.info.addressTitle }}</strong>
               <p>{{ translationService.currentContent().contact.info.address }}</p>
             </div>
           </div>
@@ -88,29 +107,16 @@
               required />
           </div>
 
-          <div class="form-row">
-            <div class="form-group">
-              <label for="email">{{ translationService.currentContent().contact.form.fields.email }} *</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                class="form-control"
-                [(ngModel)]="formData.email"
-                [placeholder]="translationService.currentContent().contact.form.fields.emailPlaceholder"
-                required />
-            </div>
-
-            <div class="form-group">
-              <label for="phone">{{ translationService.currentContent().contact.form.fields.phone }}</label>
-              <input
-                type="text"
-                id="phone"
-                name="phone"
-                class="form-control"
-                [(ngModel)]="formData.phone"
-                [placeholder]="translationService.currentContent().contact.form.fields.phonePlaceholder" />
-            </div>
+          <div class="form-group">
+            <label for="email">{{ translationService.currentContent().contact.form.fields.email }} *</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="form-control"
+              [(ngModel)]="formData.email"
+              [placeholder]="translationService.currentContent().contact.form.fields.emailPlaceholder"
+              required />
           </div>
 
           <div class="form-row">

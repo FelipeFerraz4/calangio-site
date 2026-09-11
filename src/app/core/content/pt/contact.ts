@@ -7,14 +7,17 @@ export const contactContent = {
   info: {
     title: 'Informações de Contato',
     subtitle: 'Fale diretamente com nossa equipe comercial ou visite nossa sede na UFCA.',
-    email: 'contato@calangio.com.br',
-    phone: '(88) 99999-9999',
-    address: 'Universidade Federal do Cariri (UFCA) — Av. Tenente Raimundo Rocha, 1639 - Cidade Universitária, Juazeiro do Norte - CE',
+    emailTitle: 'E-mail Institucional',
+    email: 'calangio.cct@ufca.edu.br',
+    secondaryEmail: 'calang.io.cct@gmail.com',
+    addressTitle: 'Endereço e Sede',
+    address: 'Av. Tenente Raimundo Rocha, nº 1639, Cidade Universitária, Juazeiro do Norte — Ceará, CEP: 63048-080',
     hours: 'Segunda a Sexta: 08:00 às 18:00',
+    socialTitle: 'Redes Sociais & Comunidade',
     socials: {
-      linkedin: 'https://linkedin.com/company/calangio',
-      instagram: 'https://instagram.com/calangio_ufca',
-      github: 'https://github.com/calangio'
+      linkedin: 'https://www.linkedin.com/company/calang-io-empresa-j%C3%BAnior-de-desenvolvimento-de-software/',
+      instagram: 'https://www.instagram.com/calang.io_ej/',
+      github: 'https://github.com/Calang-io'
     }
   },
   form: {
@@ -25,8 +28,6 @@ export const contactContent = {
       namePlaceholder: 'Seu nome completo',
       email: 'E-mail Comercial',
       emailPlaceholder: 'seu.email@empresa.com',
-      phone: 'Telefone / WhatsApp',
-      phonePlaceholder: '(88) 99999-9999',
       serviceType: 'Tipo de Serviço Desejado',
       serviceOptions: [
         'Selecione uma opção',

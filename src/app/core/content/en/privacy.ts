@@ -10,7 +10,7 @@ export const privacyContent = {
     },
     {
       title: '2. Personal Data Collection',
-      content: 'We collect personal data voluntarily provided by users when filling out our contact form, such as: full name, email address, phone/WhatsApp number, and project details. We may also collect anonymized browsing data via technical cookies for analytical purposes.'
+      content: 'We collect personal data voluntarily provided by users when filling out our contact form, such as: full name, email address, and project details. We may also collect anonymized browsing data via technical cookies for analytical purposes.'
     },
     {
       title: '3. Data Treatment Purpose',
@@ -22,7 +22,7 @@ export const privacyContent = {
     },
     {
       title: '5. Data Holder Rights',
-      content: 'Under data protection laws, you have the right to request confirmation of data processing, access your data, correct incomplete data, or request deletion of stored personal data. To exercise these rights, contact us at contato@calangio.com.br.'
+      content: 'Under data protection laws, you have the right to request confirmation of data processing, access your data, correct incomplete data, or request deletion of stored personal data. To exercise these rights, contact us at calangio.cct@ufca.edu.br.'
     }
   ]
 };
