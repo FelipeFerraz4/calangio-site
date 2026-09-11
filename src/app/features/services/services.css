@@ -111,10 +111,14 @@
   background: var(--color-bg-green-soft);
   color: var(--color-brand-green-dark);
   border: 1px solid var(--color-border);
+  letter-spacing: 0.02em;
+  display: inline-block;
 }
 
-[data-theme="dark"] .tech-pill {
+:host-context([data-theme="dark"]) .tech-pill {
   color: var(--color-brand-green-light);
+  background: rgba(91, 197, 0, 0.12);
+  border-color: rgba(91, 197, 0, 0.28);
 }
 
 /* Process Timeline */

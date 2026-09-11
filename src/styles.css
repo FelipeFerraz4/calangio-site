@@ -346,6 +346,33 @@ section {
   border: 1px solid rgba(91, 197, 0, 0.3);
 }
 
+[data-theme="dark"] .status-active {
+  color: #7AD42B;
+}
+
+/* Global Badges, Tags & Tech Pills */
+.tag,
+.tech-tag,
+.tech-pill {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.65rem;
+  border-radius: 20px;
+  background: var(--color-bg-green-soft);
+  color: var(--color-brand-green-dark);
+  border: 1px solid var(--color-border);
+  display: inline-block;
+  letter-spacing: 0.02em;
+}
+
+[data-theme="dark"] .tag,
+[data-theme="dark"] .tech-tag,
+[data-theme="dark"] .tech-pill {
+  color: var(--color-brand-green-light);
+  background: rgba(91, 197, 0, 0.12);
+  border-color: rgba(91, 197, 0, 0.28);
+}
+
 .status-soon {
   background: rgba(245, 158, 11, 0.12);
   color: #d97706;

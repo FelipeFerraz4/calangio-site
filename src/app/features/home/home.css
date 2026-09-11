@@ -105,7 +105,7 @@
   color: var(--color-brand-green-dark);
 }
 
-[data-theme="dark"] .hero-badge-overlay {
+:host-context([data-theme="dark"]) .hero-badge-overlay {
   color: var(--color-brand-green-light);
 }
 
@@ -258,15 +258,19 @@
 .tag {
   font-size: 0.75rem;
   font-weight: 600;
-  padding: 0.2rem 0.6rem;
-  border-radius: 12px;
-  background: var(--color-bg-soft);
-  color: var(--color-brand-navy);
+  padding: 0.25rem 0.65rem;
+  border-radius: 20px;
+  background: var(--color-bg-green-soft);
+  color: var(--color-brand-green-dark);
   border: 1px solid var(--color-border);
+  letter-spacing: 0.02em;
+  display: inline-block;
 }
 
-[data-theme="dark"] .tag {
-  color: var(--color-text-primary);
+:host-context([data-theme="dark"]) .tag {
+  color: var(--color-brand-green-light);
+  background: rgba(91, 197, 0, 0.12);
+  border-color: rgba(91, 197, 0, 0.28);
 }
 
 /* CTA Banner */
