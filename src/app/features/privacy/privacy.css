@@ -15,7 +15,11 @@
 .legal-heading {
   font-size: 1.35rem;
   margin-bottom: 0.75rem;
-  color: var(--color-brand-green);
+  color: var(--color-brand-green-dark);
+}
+
+:host-context([data-theme="dark"]) .legal-heading {
+  color: var(--color-brand-green-light);
 }
 
 .legal-text {

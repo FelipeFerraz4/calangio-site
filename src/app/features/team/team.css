@@ -32,7 +32,7 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  color: var(--color-brand-green);
+  color: var(--color-brand-green-dark);
   font-size: 1.25rem;
   box-shadow: 0 0 14px rgba(91, 197, 0, 0.12);
   transition: all var(--transition-speed) ease;
@@ -106,8 +106,12 @@
 .member-role {
   font-size: 0.85rem;
   font-weight: 700;
-  color: var(--color-brand-green);
+  color: var(--color-brand-green-dark);
   display: block;
+}
+
+:host-context([data-theme="dark"]) .member-role {
+  color: var(--color-brand-green-light);
 }
 
 .member-dept {
@@ -146,32 +150,51 @@
   gap: 0.85rem;
   padding: 0.8rem 1.2rem;
   border-radius: 16px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
   backdrop-filter: blur(8px);
   transition: all var(--transition-speed) ease;
 }
 
+:host-context([data-theme="dark"]) .benefit-item {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: none;
+}
+
 .benefit-item:hover {
+  background: var(--color-bg-green-soft);
+  border-color: var(--color-brand-green);
+  transform: translateX(4px);
+}
+
+:host-context([data-theme="dark"]) .benefit-item:hover {
   background: rgba(91, 197, 0, 0.08);
   border-color: rgba(91, 197, 0, 0.3);
-  transform: translateX(4px);
 }
 
 .benefit-icon-box {
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  background: rgba(91, 197, 0, 0.16);
-  border: 1px solid rgba(91, 197, 0, 0.32);
+  background: var(--color-bg-green-soft);
+  border: 1px solid var(--color-border);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  color: var(--color-brand-green-light);
+  color: var(--color-brand-green-dark);
   font-size: 1.15rem;
-  box-shadow: 0 0 10px rgba(91, 197, 0, 0.25);
+  box-shadow: 0 0 10px rgba(91, 197, 0, 0.15);
   transition: transform var(--transition-speed) ease;
+}
+
+:host-context([data-theme="dark"]) .benefit-icon-box {
+  background: rgba(91, 197, 0, 0.16);
+  border-color: rgba(91, 197, 0, 0.32);
+  color: var(--color-brand-green-light);
+  box-shadow: 0 0 10px rgba(91, 197, 0, 0.25);
 }
 
 .benefit-item:hover .benefit-icon-box {
@@ -180,9 +203,13 @@
 
 .benefit-text {
   font-size: 0.95rem;
-  color: #e6f1f7;
+  color: var(--color-text-primary);
   line-height: 1.4;
   font-weight: 500;
+}
+
+:host-context([data-theme="dark"]) .benefit-text {
+  color: #e6f1f7;
 }
 
 @media (max-width: 992px) {

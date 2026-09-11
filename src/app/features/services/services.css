@@ -61,8 +61,12 @@
 
 .service-card-subtitle {
   font-size: 0.85rem;
-  color: var(--color-brand-green);
+  color: var(--color-brand-green-dark);
   font-weight: 600;
+}
+
+:host-context([data-theme="dark"]) .service-card-subtitle {
+  color: var(--color-brand-green-light);
 }
 
 .service-card-desc {
@@ -146,8 +150,12 @@
   font-family: var(--font-headers);
   font-size: 1.5rem;
   font-weight: 800;
-  color: var(--color-brand-green);
+  color: var(--color-brand-green-dark);
   margin-bottom: 0.75rem;
+}
+
+:host-context([data-theme="dark"]) .step-num {
+  color: var(--color-brand-green-light);
 }
 
 .step-title {

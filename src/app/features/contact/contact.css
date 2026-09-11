@@ -47,6 +47,10 @@
 
 .info-bi-icon {
   font-size: 1.25rem;
+  color: var(--color-brand-green-dark);
+}
+
+:host-context([data-theme="dark"]) .info-bi-icon {
   color: var(--color-brand-green);
 }
 
@@ -63,10 +67,14 @@
 }
 
 .info-link {
-  color: var(--color-brand-green);
+  color: var(--color-brand-green-dark);
   text-decoration: none;
   font-weight: 500;
   transition: opacity var(--transition-speed) ease;
+}
+
+:host-context([data-theme="dark"]) .info-link {
+  color: var(--color-brand-green);
 }
 
 .info-link:hover {
@@ -101,16 +109,20 @@
   font-weight: 500;
   padding: 0.35rem 0.7rem;
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--color-bg-soft);
   border: 1px solid var(--color-border);
   color: var(--color-text-primary);
   text-decoration: none;
   transition: all var(--transition-speed) ease;
 }
 
+:host-context([data-theme="dark"]) .contact-social-link {
+  background: rgba(255, 255, 255, 0.05);
+}
+
 .contact-social-link:hover {
   background: var(--color-brand-green);
-  color: #0b1329;
+  color: #ffffff;
   border-color: var(--color-brand-green);
   transform: translateY(-1px);
 }
@@ -162,6 +174,16 @@
 
 select.form-control {
   cursor: pointer;
+}
+
+select.form-control option {
+  background-color: var(--color-card-bg);
+  color: var(--color-text-primary);
+}
+
+.form-control::placeholder {
+  color: var(--color-text-muted);
+  opacity: 0.85;
 }
 
 .btn-submit {

@@ -137,7 +137,11 @@
 }
 
 .lang-pill-btn.active {
-  color: var(--color-brand-green);
+  color: var(--color-brand-green-dark);
+}
+
+:host-context([data-theme="dark"]) .lang-pill-btn.active {
+  color: var(--color-brand-green-light);
 }
 
 .lang-divider {

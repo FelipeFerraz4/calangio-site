@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { TranslationService } from '../../../core/services/translation.service';
+import { ThemeService } from '../../../core/services/theme.service';
 
 @Component({
   selector: 'app-footer',
@@ -12,5 +13,6 @@ import { TranslationService } from '../../../core/services/translation.service';
 })
 export class Footer {
   readonly translationService = inject(TranslationService);
+  readonly themeService = inject(ThemeService);
   readonly currentYear = new Date().getFullYear();
 }

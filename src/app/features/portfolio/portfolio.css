@@ -49,9 +49,13 @@
 .category-label {
   font-size: 0.8rem;
   font-weight: 700;
-  color: var(--color-brand-green);
+  color: var(--color-brand-green-dark);
   text-transform: uppercase;
   letter-spacing: 0.04em;
+}
+
+:host-context([data-theme="dark"]) .category-label {
+  color: var(--color-brand-green-light);
 }
 
 .year-badge {

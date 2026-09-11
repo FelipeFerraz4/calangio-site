@@ -69,6 +69,26 @@
   --color-header-scrolled-border: rgba(91, 197, 0, 0.2);
   --color-header-scrolled-shadow: 0 4px 20px rgba(8, 31, 44, 0.06);
 
+  /* Footer Variables - Light Mode */
+  --color-footer-bg: #f4f9f0;
+  --color-footer-bottom-bg: #eaf5e0;
+  --color-footer-border: rgba(91, 197, 0, 0.2);
+  --color-footer-bottom-border: rgba(91, 197, 0, 0.15);
+  --color-footer-social-bg: #ffffff;
+  --color-footer-social-border: rgba(91, 197, 0, 0.25);
+  --color-footer-social-color: #081F2C;
+
+  /* Links & Accents - Light Mode */
+  --color-link: var(--color-brand-green-dark);
+  --color-link-hover: var(--color-brand-green);
+
+  /* CTA Banner - Light Mode */
+  --color-cta-bg: linear-gradient(135deg, #f4f9f0 0%, #eaf5e0 50%, #ffffff 100%);
+  --color-cta-border: var(--color-border);
+  --color-cta-shadow: var(--shadow-md), var(--shadow-glow);
+  --color-cta-title: var(--color-text-primary);
+  --color-cta-subtitle: var(--color-text-secondary);
+
   /* Typography */
   --font-headers: 'Prompt', sans-serif;
   --font-body: 'Prompt', sans-serif;
@@ -110,6 +130,26 @@
   --color-header-scrolled-bg: rgba(6, 21, 31, 0.90);
   --color-header-scrolled-border: rgba(91, 197, 0, 0.25);
   --color-header-scrolled-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+
+  /* Footer Variables - Dark Mode */
+  --color-footer-bg: #040e14;
+  --color-footer-bottom-bg: rgba(0, 0, 0, 0.35);
+  --color-footer-border: rgba(91, 197, 0, 0.2);
+  --color-footer-bottom-border: rgba(255, 255, 255, 0.08);
+  --color-footer-social-bg: rgba(255, 255, 255, 0.08);
+  --color-footer-social-border: rgba(255, 255, 255, 0.15);
+  --color-footer-social-color: #ffffff;
+
+  /* Links & Accents - Dark Mode */
+  --color-link: var(--color-brand-green);
+  --color-link-hover: var(--color-brand-green-light);
+
+  /* CTA Banner - Dark Mode */
+  --color-cta-bg: var(--gradient-navy);
+  --color-cta-border: var(--color-border);
+  --color-cta-shadow: var(--shadow-lg), var(--shadow-glow);
+  --color-cta-title: #ffffff;
+  --color-cta-subtitle: #a0b4c4;
 
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
   --shadow-md: 0 8px 30px rgba(0, 0, 0, 0.4);
@@ -157,13 +197,13 @@ p {
 }
 
 a {
-  color: var(--color-brand-green);
+  color: var(--color-link);
   text-decoration: none;
   transition: all var(--transition-speed) ease;
 }
 
 a:hover {
-  color: var(--color-brand-green-light);
+  color: var(--color-link-hover);
 }
 
 /* Layout Container */
@@ -236,23 +276,37 @@ a:hover {
 
 .btn-outline-brand {
   background: transparent;
+  color: var(--color-brand-green-dark);
+  border: 1.5px solid var(--color-brand-green-dark);
+}
+
+[data-theme="dark"] .btn-outline-brand {
   color: var(--color-brand-green);
-  border: 1.5px solid var(--color-brand-green);
+  border-color: var(--color-brand-green);
 }
 
 .btn-outline-brand:hover {
   background: var(--color-brand-green);
   color: #ffffff;
+  border-color: var(--color-brand-green);
   transform: translateY(-2px);
 }
 
 .btn-text {
   background: transparent;
-  color: var(--color-brand-green);
+  color: var(--color-brand-green-dark);
   padding: 0.5rem 1rem;
 }
 
+[data-theme="dark"] .btn-text {
+  color: var(--color-brand-green);
+}
+
 .btn-text:hover {
+  color: var(--color-brand-green);
+}
+
+[data-theme="dark"] .btn-text:hover {
   color: var(--color-brand-green-light);
 }
 
@@ -264,6 +318,10 @@ a:hover {
 }
 
 .text-brand {
+  color: var(--color-brand-green-dark);
+}
+
+[data-theme="dark"] .text-brand {
   color: var(--color-brand-green);
 }
 
@@ -425,4 +483,52 @@ section {
   .section-title {
     font-size: 1.8rem;
   }
+}
+
+/* Shared CTA Banner */
+.cta-banner-section {
+  padding: 4rem 0;
+}
+
+.cta-banner-card {
+  background: var(--color-cta-bg);
+  color: var(--color-cta-title);
+  border-radius: 24px;
+  padding: 4rem 2rem;
+  text-align: center;
+  box-shadow: var(--color-cta-shadow);
+  border: 1.5px solid var(--color-cta-border);
+  transition: background var(--transition-speed) ease,
+              border-color var(--transition-speed) ease,
+              box-shadow var(--transition-speed) ease;
+}
+
+.cta-title {
+  color: var(--color-cta-title);
+  font-size: 2.3rem;
+  margin-bottom: 1rem;
+}
+
+.cta-subtitle {
+  color: var(--color-cta-subtitle);
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+}
+
+.cta-banner-card .section-badge {
+  background: var(--color-bg-green-soft);
+  border-color: var(--color-border);
+  color: var(--color-brand-green-dark);
+}
+
+[data-theme="dark"] .cta-banner-card .section-badge {
+  background: rgba(91, 197, 0, 0.18);
+  border-color: rgba(91, 197, 0, 0.35);
+  color: var(--color-brand-green-light);
+}
+
+.btn-lg {
+  padding: 0.9rem 2.25rem;
+  font-size: 1.05rem;
 }

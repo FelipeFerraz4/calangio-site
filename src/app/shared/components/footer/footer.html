@@ -3,7 +3,8 @@
     <!-- Brand Info -->
     <div class="footer-brand">
       <a [routerLink]="['/', translationService.currentLang()]" class="footer-logo">
-        <img src="assets/images/logotipo-calangio-white.svg" alt="Calang.io Logo" class="footer-logo-img" />
+        <img *ngIf="!themeService.isDark()" src="assets/images/logotipo-calangio.svg" alt="Calang.io Logo" class="footer-logo-img" />
+        <img *ngIf="themeService.isDark()" src="assets/images/logotipo-calangio-white.svg" alt="Calang.io Logo" class="footer-logo-img" />
       </a>
       <p class="footer-tagline">
         {{ translationService.currentContent().footer.tagline }}
